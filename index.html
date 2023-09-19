@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+    <html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Encriptador de Texto</title>
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <div id="caja_logo">
+                <h1><img src="img/Logo.png" alt="Logo del encriptador de texto"></h1>
+            </div>
+        </header>
+        
+        <main id="elementos_pagina">
+            <section>
+                <div id="campos_texto">
+                    <!--Campos de Texto para Encriptado/Desencriptado-->
+                    <textarea class="texto_ingreso" name="entradatexto" rows="20" cols="65" placeholder='Ingrese el texto aqui...'></textarea>
+                    <textarea class="texto_trabajado" name="salidatexto" rows="34" cols="30" readonly></textarea>
+                </div>
+                <div id="informacion_error">
+                    <!--Indicador de error de texto ingresado con mayusculas o caracteres especiales-->
+                    <img class="informacion_imagen" src="img/Group.png" alt="indicador de información">
+                    <p class="informacion_texto">Solo letras minúsculas y sin acentos</p>
+                </div>
+                <div id="botones">
+                    <!--Botones de Encriptado/Desencriptado-->
+                    <button id="boton_encriptar">Encriptar</button>
+                    <button id="boton_desencriptar">Desencriptar</button>
+                </div>
+            </section>
+        </main>
+
+        <footer id="portafolio">
+            <p><a href="https://github.com/GrekBrony">Cesar Perea</p>
+            <img src="img/Logo_GH.png" alt="Logo Github">
+        </footer>
+
+
+        <script>
+
+            //Visibilidad de imagen- Ningun mensaje encontrado
+            function noTextoImagen(){
+                document.querySelector(".texto_trabajado").setAttribute("style","background-image:none;");      
+            }
+
+            //Caracteres especiales y Mayusculas Negados
+            const caracteres = /[A-Z0-9~!@#$%&*()_+|{}[\]\\\/?><^:"`;.,áéíóúàèìòù']/g;
+
+            
+            function encriptado(){
+
+                var texto = document.querySelector(".texto_ingreso").value;
+                
+                if (texto.match(caracteres) != texto.match(caracteres)){
+
+                    //Indicador- Texto Erroneo cambio a color rojo
+                    document.querySelector(".informacion_texto").setAttribute("style","color:red;");
+
+                } else {
+
+                    //Indicador- TextoCorrecto, cambio a color negro
+                    document.querySelector(".informacion_texto").setAttribute("style","color:black;");
+
+                    //Cifrado de texto
+                    var textoCifrado = texto.replace(/e/gi, "enter").replace(/i/gi, "imes").replace(/a/gi, "ai").replace(/o/gi, "ober").replace(/u/gi, "ufat");
+                    document.querySelector(".texto_trabajado").value = textoCifrado;
+                    
+                    noTextoImagen();
+
+                }
+            }
+
+            function desencriptado(){
+
+                var texto = document.querySelector(".texto_ingreso").value;
+
+                if (texto.match(caracteres) != texto.match(caracteres)){
+
+                    //Indicador- Texto Erroneo cambio a color rojo
+                    document.querySelector(".informacion_texto").setAttribute("style","color:red;");
+
+                } else {
+
+                    //Indicador- TextoCorrecto, cambio a color negro
+                    document.querySelector(".informacion_texto").setAttribute("style","color:black;");
+
+                    //Descifrado de texto
+                    var textoCifrado = texto.replace(/enter/gi, "e").replace(/imes/gi, "i").replace(/ai/gi, "a").replace(/ober/gi, "o").replace(/ufat/gi, "u");
+                    document.querySelector(".texto_trabajado").value = textoCifrado;
+                    document.querySelector(".texto_ingreso").value;
+
+                    noTextoImagen();
+                }
+
+            }
+            
+
+            //Funcion Boton Encriptado
+            var botonEncriptado = document.getElementById("boton_encriptar");
+            botonEncriptado.onclick = encriptado;
+            
+            //Funcion Boton Desencriptado
+            var botonDesencriptado = document.getElementById("boton_desencriptar");
+            botonDesencriptado.onclick = desencriptado;
+
+        </script>
+    </body>
+
+    </html> 
+    
+    

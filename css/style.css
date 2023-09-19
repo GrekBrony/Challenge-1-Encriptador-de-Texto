@@ -1,0 +1,389 @@
+body{
+    font-family: 'Inter', sans-serif;
+    background-image: url(../img/Fondo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#caja_logo{
+    width: 940px;
+    margin: 0 auto;
+}
+
+#caja_logo img{
+    margin: 3% 0 2% 0%;
+    display: block;
+    width: 80px;
+    height: 80px;
+}
+
+#elementos_pagina{
+    width: 940px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#campos_texto{
+    position: relative;
+}
+
+
+.texto_ingreso{
+    resize: none;
+    margin: 0 2% 5% 10%;
+    padding: 10px;
+    border-radius: 15px;
+    background-image: url(../img/Icono_Fondo.png);
+    background-color: whitesmoke;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 105px 105px;
+    border-style: none;
+}
+
+.texto_trabajado{
+    resize: none;
+    position: absolute;
+    top: -24%;
+    margin: 0 0 0 2%;
+    padding: 10px;
+    border-radius: 15px;
+    border-width: 0px;
+    background-image: url(../img/Sin_Texto2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 300px 300px;
+    background-color: lightgray;
+
+}
+
+.informacion_imagen{
+    width: 1.2%;
+    margin: 0 0 0 10%;
+}
+
+.informacion_texto{
+    display: inline-block;
+    margin: 0 0 1% 0;
+    font-size: 12px;
+}
+
+#boton_encriptar{
+    width: 26%;
+    margin: 0 1% 0 10%;
+    padding: 15px 0;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    background: darkblue;
+    border: black;
+    border-radius: 15px;
+    transition: 1s all;
+    cursor:pointer;
+}
+
+#boton_desencriptar{
+    width: 26%;
+    margin: 0 0 0 1%;
+    padding: 15px 0;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    background: gray;
+    border: black;
+    border-radius: 15px;
+    transition: 1s all;
+    cursor:pointer;
+}
+footer{
+    width: 940px;
+    margin: 0 auto;
+}
+
+footer p{
+    display: inline-block;
+    position: relative;
+    font-size: medium;
+    margin-top: 2.3%;
+    font-weight: bold;
+    left: 10%;
+    
+}
+
+footer img{
+    width: 1.5%;
+    margin-left: 10%;
+
+}
+
+/*AJUSTES PARA DISPOSITIVOS MOVILES*/
+
+/*DISPOSITIVOS MENORES A 480PX*/
+
+@media screen and (max-width:480px){
+
+    body{
+        background-image: url(../img/Fondo.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    #caja_logo img{
+        margin: 4% 0 4% 0;
+        display: block;
+        width: 70px;
+        height: 70px;
+    }
+
+    #caja_logo{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #elementos_pagina{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #informacion_error{
+        display: flex;
+        align-items: center;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .texto_ingreso{
+        display: block;
+        width: 90%;
+        height: 12em;
+        margin: 10% 1% 0 2%;
+        padding: 10px;
+        border-radius: 15px;
+        background-image: url(../img/Icono_Fondo.png);
+        background-color: whitesmoke;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 80px 80px;
+        border-style: none;
+    }
+
+    .texto_trabajado{
+        position: absolute;
+        top: auto;
+        width: 90%;
+        height: 12em;
+        margin: 30% 2% 0 2%;
+        padding: 10px;
+        border-radius: 15px;
+        border-width: 0px;
+        background-image: url(../img/No_TextoEncontrado.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: auto;
+        background-color: lightgray;
+        
+    }
+
+    .informacion_imagen{
+        width: auto;
+        margin: 0.5% 0 0 2%;
+    }
+    
+    .informacion_texto{
+        margin: 2% 0 2% 1%;
+        font-size: small;
+    }
+
+    #botones{
+        margin: 1% 0 2% -9%;
+        display: flex;
+        align-content: center;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    #boton_encriptar{
+        width: 40%;
+        padding: 15px 0;
+        font-size: 15px;
+        font-weight: bold;
+        color: white;
+        background: darkblue;
+        border: black;
+        border-radius: 15px;
+        transition: 1s all;
+        cursor:pointer;
+    }
+
+    #boton_desencriptar{
+        width: 40%;
+        margin-left: 2%;
+        padding: 15px 0;
+        font-size: 15px;
+        font-weight: bold;
+        color: white;
+        background: gray;
+        border: black;
+        border-radius: 15px;
+        transition: 1s all;
+        cursor:pointer;
+    }
+
+    #portafolio{
+        width: 90%;
+        margin: 0 auto;
+        position: absolute;
+        bottom: 1%;
+        
+    }
+
+    #portafolio p{
+        
+        display: inline-block;
+        font-size: medium;
+    }
+
+    #portafolio img{
+        width: 4%;
+    }
+
+    
+
+}
+
+/*AJUSTES PARA TABLETS*/
+
+/*DISPOSITIVOS MENORES A 1080PX*/
+
+@media screen and (min-width:540px) and (max-width:1280px){
+
+    body{
+        background-image: url(../img/Fondo.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    #caja_logo img{
+        margin: 4% 0 4% 0;
+        display: block;
+        width: 70px;
+        height: 70px;
+    }
+
+    #caja_logo{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #elementos_pagina{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #informacion_error{
+        display: flex;
+        align-items: center;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .texto_ingreso{
+        display: block;
+        width: 90%;
+        height: 13em;
+        margin: 10% 1% 0 2%;
+        padding: 10px;
+        border-radius: 15px;
+        background-image: url(../img/Icono_Fondo.png);
+        background-color: whitesmoke;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 80px 80px;
+        border-style: none;
+    }
+
+    .texto_trabajado{
+        position: absolute;
+        top: auto;
+        width: 90%;
+        height: 13em;
+        margin: 21% 2% 0 2%;
+        padding: 10px;
+        border-radius: 15px;
+        border-width: 0px;
+        background-image: url(../img/No_TextoEncontrado.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: auto;
+        background-color: lightgray;
+        
+    }
+
+    .informacion_imagen{
+        width: auto;
+        margin: 0.5% 0 0 2%;
+    }
+    
+    .informacion_texto{
+        margin: 2% 0 2% 1%;
+        font-size: small;
+    }
+
+    #botones{
+        margin: 1% 0 2% -9%;
+        display: flex;
+        align-content: center;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    #boton_encriptar{
+        width: 40%;
+        padding: 15px 0;
+        font-size: 15px;
+        font-weight: bold;
+        color: white;
+        background: darkblue;
+        border: black;
+        border-radius: 15px;
+        transition: 1s all;
+        cursor:pointer;
+    }
+
+    #boton_desencriptar{
+        width: 40%;
+        margin-left: 2%;
+        padding: 15px 0;
+        font-size: 15px;
+        font-weight: bold;
+        color: white;
+        background: gray;
+        border: black;
+        border-radius: 15px;
+        transition: 1s all;
+        cursor:pointer;
+    }
+
+    #portafolio{
+        width: 90%;
+        margin: 0 auto;
+        position: absolute;
+        bottom: 1%;
+        
+    }
+
+    #portafolio p{
+        
+        display: inline-block;
+        font-size: x-large;
+    }
+
+    #portafolio img{
+        width: 3%;
+    }
+
+}
